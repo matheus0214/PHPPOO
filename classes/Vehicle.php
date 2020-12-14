@@ -10,7 +10,7 @@ class Vehicle
 
     public int $engine;
 
-    public function __construct($brand, $color)
+    public function __construct($brand = null, $color = null)
     {
         $this->brand = $brand;
         $this->color = $color;
