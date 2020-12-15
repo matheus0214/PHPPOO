@@ -2,7 +2,11 @@
 
 namespace classes;
 
-class Vehicle
+use interfaces\IVehicle;
+
+require __DIR__."/../interfaces/IVehicle.php";
+
+abstract class Vehicle implements IVehicle
 {
     public string $brand;
 
@@ -16,8 +20,8 @@ class Vehicle
         $this->color = $color;
     }
 
-    function run()
+    function run(): string
     {
-        echo "{$this->brand} is running";
+        return "{$this->brand} is running";
     }
 }
